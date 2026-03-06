@@ -60,7 +60,7 @@ title: Home
 <section class="section" id="contact">
     <h2>Contact</h2>
     <p>
-        Email: <a href="mailto:qilei.dai@qq.com">qilei.dai@qq.com</a><br>
+        Email: <a href="mailto:penguin.debug@gmail.com">penguin.debug@gmail.com</a><br>
         GitHub: <a href="https://github.com/taichilei" target="_blank">github.com/taichilei</a><br>
         Resume: <a href="#" target="_blank">Download PDF</a>
     </p>
