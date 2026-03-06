@@ -1,0 +1,23 @@
+# Jekyll 构建输出
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+
+# Ruby 依赖
+Gemfile.lock
+.bundle/
+
+# 临时文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 预览文件
+preview.html
+
+# 日志文件
+*.log

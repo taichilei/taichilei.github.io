@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+}
+
+.navbar {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+
+.theme-toggle:hover {
+    background-color: #f5f5f5;
+    border-color: #ccc;
+}
+
+.theme-toggle .moon-icon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+    display: inline;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.nav-links a.highlight {
+    background-color: #0366d6;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.nav-links a.highlight:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 600px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #111;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.work-item {
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.work-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.work-description {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.links {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 15px 30px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+    
+    .nav-links a.highlight {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .title {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .work-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --heading-color: #ffffff;
+        --border-color: #333;
+        --link-color: #58a6ff;
+        --link-hover-color: #79b8ff;
+        --secondary-text: #bbbbbb;
+        --muted-text: #cccccc;
+        --faint-text: #aaaaaa;
+        --footer-text: #888888;
+        --btn-bg: #58a6ff;
+        --btn-hover-bg: #79b8ff;
+        --btn-color: #ffffff;
+        --toggle-bg: #1e1e1e;
+        --toggle-border: #444;
+        --toggle-hover-bg: #2a2a2a;
+    }
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --border-color: #333;
+    --link-color: #58a6ff;
+    --link-hover-color: #79b8ff;
+    --secondary-text: #bbbbbb;
+    --muted-text: #cccccc;
+    --faint-text: #aaaaaa;
+    --footer-text: #888888;
+    --btn-bg: #58a6ff;
+    --btn-hover-bg: #79b8ff;
+    --btn-color: #ffffff;
+    --toggle-bg: #1e1e1e;
+    --toggle-border: #444;
+    --toggle-hover-bg: #2a2a2a;
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #111111;
+    --border-color: #eeeeee;
+    --link-color: #0366d6;
+    --link-hover-color: #0056b3;
+    --secondary-text: #666666;
+    --muted-text: #555555;
+    --faint-text: #666666;
+    --footer-text: #888888;
+    --btn-bg: #0366d6;
+    --btn-hover-bg: #0056b3;
+    --btn-color: #ffffff;
+    --toggle-bg: #ffffff;
+    --toggle-border: #dddddd;
+    --toggle-hover-bg: #f5f5f5;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+}
+
+.navbar {
+    border-bottom-color: var(--border-color);
+}
+
+.nav-links a {
+    color: var(--secondary-text);
+}
+
+.nav-links a:hover {
+    color: var(--link-color);
+}
+
+.nav-links a.highlight {
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+}
+
+.nav-links a.highlight:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+.title {
+    color: var(--secondary-text);
+}
+
+.bio {
+    color: var(--muted-text);
+}
+
+.work-description {
+    color: var(--muted-text);
+}
+
+.links {
+    color: var(--faint-text);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+h2 {
+    border-bottom-color: var(--border-color);
+}
+
+footer {
+    border-top-color: var(--border-color);
+    color: var(--footer-text);
+}
+
+.theme-toggle {
+    background-color: var(--toggle-bg);
+    border-color: var(--toggle-border);
+}
+
+.theme-toggle:hover {
+    background-color: var(--toggle-hover-bg);
+    border-color: var(--toggle-border);
+}

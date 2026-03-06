@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="nav-links">
+        {% for item in site.nav %}
+        <a href="{{ item.link | relative_url }}" {% if item.link contains 'http' %}target="_blank"{% endif %}>{{ item.name }}</a>
+        {% endfor %}
+        <a href="https://your-react-project.com" target="_blank" class="highlight">React 项目</a>
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+</nav>
+
+<header id="home">
+    <h1>ChiLei Tai</h1>
+    <p class="title">IT Enthusiast</p>
+    <p class="bio">
+        Passionate about technology, focused on full-stack development, 
+        artificial intelligence, and system architecture. 
+        Continuously learning and exploring the endless possibilities of technology.
+    </p>
+</header>
